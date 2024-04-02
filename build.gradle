@@ -6,8 +6,8 @@ plugins {
 }
 sonar {
   properties {
-    property "sonar.projectKey", "juansein_vulnerable-java-application_f85440bf-a152-4c43-a146-c50c8593144a"
-    property "sonar.projectName", "vulnerable-java-application"
+    property "sonar.projectKey", "juansein_challenge-despegar_87da7d68-e07a-474e-9197-a68e64e98ea1"
+    property "sonar.projectName", "challenge-despegar"
   }
 }
 group = 'com.datadoghq.workshops'

@@ -1,0 +1,33 @@
+plugins {
+ 	id "org.sonarqube" version "4.4.1.3373"
+	id 'org.springframework.boot' version '2.7.3'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+	id 'java'
+}
+sonar {
+  properties {
+    property "sonar.projectKey", "juansein_vulnerable-java-application_f85440bf-a152-4c43-a146-c50c8593144a"
+    property "sonar.projectName", "vulnerable-java-application"
+  }
+}
+group = 'com.datadoghq.workshops'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'ch.qos.logback:logback-classic:1.2.11'
+  implementation 'net.logstash.logback:logstash-logback-encoder:7.2'
+  implementation 'org.projectlombok:lombok:1.18.22'
+  compileOnly 'org.projectlombok:lombok:1.18.24'
+  annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

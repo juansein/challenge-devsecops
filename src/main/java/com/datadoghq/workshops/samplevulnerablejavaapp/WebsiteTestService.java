@@ -22,6 +22,7 @@ public class WebsiteTestService {
         try {
             HttpHeaders headers = new HttpHeaders();
             if (request.customHeaderKey != null && !request.customHeaderKey.isEmpty()) {
+                String secretKey = "B4DEpXDCL8ws1f7zgC08BWoFz1osgttnIR2mCxeZ";
                 headers.set(request.customHeaderKey, request.customHeaderValue);
             }
 

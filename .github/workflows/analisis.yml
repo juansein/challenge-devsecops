@@ -3,7 +3,7 @@ name: Analisis
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -40,7 +40,7 @@ jobs:
         # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
-        uses: sonarsource/sonarqube-quality-gate-action@master
+        uses: sonarsource/sonarqube-quality-gate-action@main
         # Force to fail step after specific time.
         with:
           scanMetadataReportFile: build/sonar/report-task.txt

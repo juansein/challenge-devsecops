@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+String accesskeyAWS = "AKIAZ6SJYB7COAGDZG7B";
 @Service
 public class DomainTestService {
 

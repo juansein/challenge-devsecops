@@ -1,45 +1,45 @@
+## Challenge despegar
 
-# Vulnerable Java application
-holamundo8.0.1asads
-This repository contains a sample application, the "Websites Tester Service", that's vulnerable to a [Command Injection](https://owasp.org/www-community/attacks/Command_Injection) and [Server-Side Request Forgery (SSRF)](https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/) vulnerability.
+### creamos una instancia con ubuntu y configuramos el par de claves para la conexión por ssh
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/18f93fff-cc1f-4627-ad7f-e384ad5295fe)
 
-> **Warning**
-> This application is purposely vulnerable and can trivially be hacked. Don't expose it to the Internet, and don't run it in a production environment.
-> Instead, you can run it locally on your machine, or in a cloud environment on a private VPC.
+### creamos el security group para permitir el trafico por ssh desde nuestro equipo y por el puerto 9000 para la conexión de github con el servicio de sonarqube
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/853774be-dcff-4c83-8909-12817021981f)
 
-## Running locally
+### nos conectamos por ssh a la instancia y empezamos con la instalación de docker
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/c397111c-9eda-4148-90f4-c06fb6b32bf9)
 
-1. Build the image locally, or use `ghcr.io/datadog/vulnerable-java-application`:
-2. Run:
+### descargamos e instalamos docker-compose
 
-```
-docker run --rm -p 8000:8000 ghcr.io/datadog/vulnerable-java-application
-```
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/9284c376-4633-4dc7-9b45-d606b6a02d46)
 
-3. You can then access the web application at http://127.0.0.1:8000
+### descargamos nuestro archivo .yml y usamos el comando docker-compose up para el despliegue de nuestros contenedores
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/2807b787-d7b8-48fb-9664-f6ea2bd8f8aa)
 
-## Running on Kubernetes
+### vemos que nuestro servicio sonarqube ya esta levantado
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/2adea65d-2e9a-4368-9fc4-4366fff6ad77)
 
-```
-kubectl run  vulnerable-application --port=8000 --expose=true --image ghcr.io/datadog/vulnerable-java-application
-kubectl port-forward pod/vulnerable-application 8000
-```
+### abrimos nuestra pagina de sonarqube en el puerto 9000 y configuramos las credenciales admin
 
-You can then access the web application at http://127.0.0.1:8000
+### creamos nuestro repositorio de github con el codigo vulnerable asi como la app de github y sus respectivos permisos en el repo
 
-## Exploitation
+### configuramos las credenciales de autenticación de github app en sonarqube
 
-### Server-side request vulnerability
+### ahora si importamos el proyecto
 
-1. Browse to http://127.0.0.1:8000/website.html
-2. Note how the input allows you to specify arbitrary URLs such as `http://google.com`, but also any internal IP such as `http://169.254.169.254/latest/meta-data/`
-3. When the applications is running in AWS, Azure or GCP, this can often be exploited to retrieve instance metadata credentials
+### configuramos los github secrets con los token SONAR_TOKEN y SONAR_HOST_URL  
 
-### Command injection vulnerability
+### creamos el workflow y configuramos el build.gradle
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/3d85567f-c759-49ca-83c0-d714a32296d1)
 
-1. Browse to http://127.0.0.1:8000/index.html
-2. Note how the input allows you to specify domain names such as `google.com` and ping them
-3. Note that there is some level of input validation - entering `$(whoami)` returns `Invalid domain name: $(whoami) - don't try to hack us!`
-4. However, the validation is buggy - notice how you can start the input with a domain name, and execute and command in the container!
+### ya tenemos nuestro repositorio integrado con sonarqube y listo para analizar cambios
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/e6017a34-5bf7-46c2-9c50-f254dcc10b8e)
 
-![image](https://user-images.githubusercontent.com/136675/186954376-e3d82d03-7d9e-49b3-a106-6da080980dae.png)
+### habilitamos la protección de branches en el main para evitar merges cuando el quality gate falle
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/1e0334a6-67f2-4314-be3b-388b8285f86b)
+
+### ahora cada vez que queramos hacer un commit tendremos que hacer una pull request
+
+### asi quedaria un flujo completo: 
+
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/575fcf1f-59ef-433b-abb2-945b731d6e06)

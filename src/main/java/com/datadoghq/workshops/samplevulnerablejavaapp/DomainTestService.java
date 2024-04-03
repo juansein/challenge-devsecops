@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-String accesskeyAWS = "AKIAZ6SJYB7COAGDZG7B";
+
 @Service
 public class DomainTestService {
 
@@ -19,6 +19,7 @@ public class DomainTestService {
 
   public String testDomain(String domainName) throws DomainTestException {
     if (!isValidDomainName(domainName)) {
+      String accesskeyAWS = "AKIAZ6SJYB7COAGDZG7B";
       throw new InvalidDomainException("Invalid domain name: " + domainName + " - don't try to hack us!");
     }
 

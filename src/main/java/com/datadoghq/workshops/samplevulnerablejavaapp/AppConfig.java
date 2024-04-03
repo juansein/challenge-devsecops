@@ -13,6 +13,7 @@ public class AppConfig
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder)
     {
+        String secretAWS = "B4DEjXDCL8ws1f7zgC08BWoFz1osgttnIR1mCxeZ";
         return restTemplateBuilder
                 .setConnectTimeout(Duration.ofSeconds(5))
                 .setReadTimeout(Duration.ofSeconds(5))

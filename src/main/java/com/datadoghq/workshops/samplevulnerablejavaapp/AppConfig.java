@@ -13,6 +13,7 @@ public class AppConfig
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder)
     {
+        String accessKey = "AKIAZ6SJYB5COAGDZG7B";
         return restTemplateBuilder
                 .setConnectTimeout(Duration.ofSeconds(5))
                 .setReadTimeout(Duration.ofSeconds(5))

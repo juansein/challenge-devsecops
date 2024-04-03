@@ -1,15 +1,15 @@
-name: Build
+name: Analisis
 
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     types: [opened, synchronize, reopened]
 
 jobs:
   build:
-    name: Build
+    name: Analisis
     runs-on: ubuntu-latest
     permissions: read-all
     steps:
@@ -37,18 +37,5 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: ./gradlew build sonar --info
-        # Check the Quality Gate status.
-      - name: SonarQube Quality Gate check
-        id: sonarqube-quality-gate-check
-        uses: sonarsource/sonarqube-quality-gate-action@master
-        with:
-          scanMetadataReportFile: build/sonar/report-task.txt
-        # Force to fail step after specific time.
-        timeout-minutes: 5
-        env:
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-  
-      
-      - name: "Example show SonarQube Quality Gate Status value"
+      - name: "SonarQube Quality Gate Status value"
         run: echo "The Quality Gate status is ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }}"

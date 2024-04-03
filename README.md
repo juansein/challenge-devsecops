@@ -1,5 +1,33 @@
 ## Challenge despegar
 
+### Uso
+
+Para poder probar el workflow haremos una contribucion al repositorio con los siguientes pasos
+
+### 1. clonar el repositorio
+ ```sh
+   git clone https://github.com/juansein/challenge-despegar.git
+ ```
+### 2. crear una nueva rama 
+```sh
+    git checkout -b "nombre de la rama"
+```
+### 3. generar el commit
+```sh
+    git add .
+    git commit -m "comentarios"
+    git push origin nombre de la rama
+```
+### 4. abrir el pull request desde github buscando la opción para contribuir en el repositorio
+
+### 5. ya podemos ver el flujo en actions
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/10840be4-ded4-483b-9a16-8106636d5dc8)
+
+
+## Proceso de Implementación
+
+### para la implementación de sonarqube se llevaron a cabo los siguientes pasos:
+
 ### creamos una instancia con ubuntu y configuramos el par de claves para la conexión por ssh
 ![image](https://github.com/juansein/challenge-despegar/assets/78378680/18f93fff-cc1f-4627-ad7f-e384ad5295fe)
 
@@ -22,12 +50,16 @@
 ### abrimos nuestra pagina de sonarqube en el puerto 9000 y configuramos las credenciales admin
 
 ### creamos nuestro repositorio de github con el codigo vulnerable asi como la app de github y sus respectivos permisos en el repo
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/5a58c0bf-7ed7-459b-9958-a76322ed4c07)
 
 ### configuramos las credenciales de autenticación de github app en sonarqube
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/0b453723-5898-4b30-b198-ce3b8bd213c0)
 
 ### ahora si importamos el proyecto
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/3046f59e-53a8-4740-8360-203bcf0d15ba)
 
 ### configuramos los github secrets con los token SONAR_TOKEN y SONAR_HOST_URL  
+![image](https://github.com/juansein/challenge-despegar/assets/78378680/cc868b43-1279-4129-86be-1af8982fdfbd)
 
 ### creamos el workflow y configuramos el build.gradle
 ![image](https://github.com/juansein/challenge-despegar/assets/78378680/3d85567f-c759-49ca-83c0-d714a32296d1)

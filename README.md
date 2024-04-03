@@ -2,7 +2,7 @@
 
 ### Uso
 
-Para poder probar el workflow haremos una contribucion al repositorio con los siguientes pasos
+Para poder probar el workflow hacer una contribución al repositorio realizando los siguientes pasos
 
 ### 1. clonar el repositorio
  ```sh

@@ -6,23 +6,27 @@ Para poder probar el workflow haremos una contribucion al repositorio con los si
 
 ### 1. clonar el repositorio
  ```sh
-   git clone https://github.com/juansein/challenge-despegar.git
+git clone https://github.com/juansein/challenge-despegar.git
  ```
 ### 2. crear una nueva rama 
 ```sh
-    git checkout -b "nombre de la rama"
+git checkout -b "nombre de la rama"
 ```
 ### 3. generar el commit
 ```sh
-    git add .
-    git commit -m "comentarios"
-    git push origin nombre de la rama
+git add .
+git commit -m "comentarios"
+git push origin nombre de la rama
 ```
 ### 4. abrir el pull request desde github buscando la opción para contribuir en el repositorio
 
 ### 5. ya podemos ver el flujo en actions
 ![image](https://github.com/juansein/challenge-despegar/assets/78378680/10840be4-ded4-483b-9a16-8106636d5dc8)
 
+### para usar el script de busqueda de keys
+```sh
+python ./keyfinder.py
+```
 
 ## Proceso de Implementación
 

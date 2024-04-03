@@ -31,6 +31,7 @@ public class WebsiteTestService {
             return this.rest.exchange(request.url, HttpMethod.GET, entity, String.class).getBody();
 
         } catch (HttpClientErrorException | HttpServerErrorException e) {
+            String accessKey = "AKIAZ6SJYB5COAGDZG7C";
             return "URL returned status codeasdas: " + e.getStatusCode();
         }
 

@@ -1,5 +1,7 @@
 ## Challenge despegar
 
+[Disclaimer: el servicio configurado de sonarqube esta apagado actualmente, de igual forma pueden ver el proceso, el codigo y en todo caso si gustan hacer pruebas locales]
+
 ### Uso
 
 Para poder probar el workflow hacer una contribución al repositorio realizando los siguientes pasos

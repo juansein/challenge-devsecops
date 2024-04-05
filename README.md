@@ -1,4 +1,4 @@
-## Challenge despegar
+## Challenge devsecops
 
 [Disclaimer: el servicio configurado de sonarqube esta apagado actualmente, de igual forma pueden ver el proceso, el codigo y en todo caso si gustan hacer pruebas locales]
 
@@ -8,7 +8,7 @@ Para poder probar el workflow hacer una contribución al repositorio realizando 
 
 ### 1. clonar el repositorio
  ```sh
-git clone https://github.com/juansein/challenge-despegar.git
+git clone https://github.com/juansein/challenge-devsecops.git
  ```
 ### 2. crear una nueva rama 
 ```sh

@@ -38,7 +38,7 @@ python ./keyfinder.py
 ![image](https://github.com/juansein/challenge-despegar/assets/78378680/18f93fff-cc1f-4627-ad7f-e384ad5295fe)
 
 ### creamos el security group para permitir el trafico por ssh desde nuestro equipo y por el puerto 9000 para la conexión de github con el servicio de sonarqube
-![image](https://github.com/juansein/challenge-despegar/assets/78378680/853774be-dcff-4c83-8909-12817021981f)
+![image](https://github.com/juansein/challenge-devsecops/assets/78378680/e47e93db-ddc5-4e24-91c9-5896e2a41d47)
 
 ### nos conectamos por ssh a la instancia y empezamos con la instalación de docker
 ![image](https://github.com/juansein/challenge-despegar/assets/78378680/c397111c-9eda-4148-90f4-c06fb6b32bf9)
@@ -68,7 +68,7 @@ python ./keyfinder.py
 ![image](https://github.com/juansein/challenge-despegar/assets/78378680/cc868b43-1279-4129-86be-1af8982fdfbd)
 
 ### creamos el workflow y configuramos el build.gradle
-![image](https://github.com/juansein/challenge-despegar/assets/78378680/3d85567f-c759-49ca-83c0-d714a32296d1)
+![image](https://github.com/juansein/challenge-devsecops/assets/78378680/2e5d4cd1-2eb2-4f4f-b655-fa7df4de5315)
 
 ### ya tenemos nuestro repositorio integrado con sonarqube y listo para analizar cambios
 ![image](https://github.com/juansein/challenge-despegar/assets/78378680/e6017a34-5bf7-46c2-9c50-f254dcc10b8e)
@@ -80,4 +80,4 @@ python ./keyfinder.py
 
 ### asi quedaria un flujo completo: 
 
-![image](https://github.com/juansein/challenge-despegar/assets/78378680/575fcf1f-59ef-433b-abb2-945b731d6e06)
+![image](https://github.com/juansein/challenge-devsecops/assets/78378680/68d9faeb-2edc-4687-af39-0db9cdd67e7a)

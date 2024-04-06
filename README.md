@@ -1,6 +1,6 @@
 ## Challenge devsecops
 
-[Disclaimer: el servicio configurado de sonarqube esta apagado actualmente, de igual forma pueden ver el proceso, el codigo y si gustan hacer pruebas locales]
+[el servicio configurado de sonarqube esta apagado actualmente, de igual forma pueden ver el proceso, el codigo y si gustan hacer pruebas locales]
 
 ### Uso
 

@@ -6,8 +6,8 @@ plugins {
 }
 sonar {
   properties {
-    property "sonar.projectKey", "juansein_challenge-despegar_87da7d68-e07a-474e-9197-a68e64e98ea1"
-    property "sonar.projectName", "challenge-despegar"
+    property "sonar.projectKey", "juansein_challenge-devsecops_87da7d68-e07a-474e-9197-a68e64e98ea1"
+    property "sonar.projectName", "challenge-devsecops"
   }
 }
 group = 'com.datadoghq.workshops'
